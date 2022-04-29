@@ -5,6 +5,7 @@ use App\Http\Controllers\MiController;
 use App\Http\Controllers\OtroController;
 use App\Http\Controllers\ControladorPrecios;
 use App\Http\Controllers\CursoController;
+use App\Http\Controllers\InfoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,4 +37,6 @@ Route::get('precio/{precio}', [ControladorPrecios::class, 'precios']);
 Route::get('nombre/{nombre}/precio/{precio}', [ControladorPrecios::class, 'getIVA']);
 
 Route::resource('cursos', CursoController::class);
+
+Route::get('nosotros',[InfoController::class,'info']);
 

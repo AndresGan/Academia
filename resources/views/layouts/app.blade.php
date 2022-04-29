@@ -7,9 +7,8 @@
     <body>
         <br>
         <br>
-        <br>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-            <a class="navbar-brand">  <img src="/logo/calico.png" width="30" height="30" alt=""></a>
+            <a href="/cursos" class="navbar-brand">  <img src="/logo/calico.png" width="30" height="30" alt=""></a>
             <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -20,6 +19,12 @@
                     </li>
                     <li class="nav-item active">
                         <a class="nav-link" href="#">Docentes <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/cursos/create">Crear curso <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/nosotros">Sobre nosotros <span class="sr-only">(current)</span></a>
                     </li>
                 </ul>
             </div>
