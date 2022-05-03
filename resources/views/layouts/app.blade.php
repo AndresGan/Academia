@@ -14,18 +14,29 @@
             </button>
             <div id="my-nav" class="collapse navbar-collapse">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Nuestros cursos <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Docentes <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/cursos/create">Crear curso <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/nosotros">Sobre nosotros <span class="sr-only">(current)</span></a>
-                    </li>
+                    <li class="nav-item dropdown active">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Cursos
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="/cursos/create">Crear curso</a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="/cursos">Ver cursos</a>
+                        </div>
+                      </li>
+                      <li class="nav-item dropdown active">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Docentes
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="/docentes/create">Agregar docentes</a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="/docentes">Ver docentes</a>
+                        </div>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/nosotros">Sobre nosotros <span class="sr-only">(current)</span></a>
+                        </li>
+                      </li>
                 </ul>
             </div>
         </nav>

@@ -24,4 +24,3 @@
         <button class="btn btn-primary" type="submit">Actualizar</button>
     </form>
 @endsection
-d
