@@ -43,6 +43,11 @@ class CursoController extends Controller
         $cursito = new Curso();
         $cursito->nombre = $request->input('nombre');
         $cursito->descripcion = $request->input('descripcion');
+        $validacionDatos = $request->validate([
+            'nombre' => 'required|max:10',
+            'imagen' => 'required|image'
+        ]);
+
 
         /*
         validamos si viene un archivo desde el campo eqis..
@@ -112,9 +117,11 @@ class CursoController extends Controller
     {
         $cursito = Curso::find($id);
         $urlImagenBD = $cursito->imagen;
-        $rutaCompleta = public_path().$urlImagenBD;
         $nombreImagen = str_replace('public/','\storage\\',$urlImagenBD);
-        return $nombreImagen;
+        $rutaCompleta = public_path().$nombreImagen;
+        unlink($rutaCompleta);
+        $cursito->delete();
+        return 'Eliminado';
 
         //return $cursito;
     }

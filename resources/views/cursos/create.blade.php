@@ -9,6 +9,12 @@
     <form action="/cursos" method="POST" enctype="multipart/form-data">
 
         @csrf
+        @if ($errors->any())
+            @foreach ($errors->all() as $alerta)
+                <p>{{$alerta}}</p>
+            @endforeach
+        @endif
+        
         <div class="form-group">
         <label for="name">Ingrese el nombre del curso</label>
         <input id="name" class="form-control" type="text" name="nombre">
